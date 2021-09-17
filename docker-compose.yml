@@ -1,9 +1,18 @@
-version: "3"
-
+version: '3'
 services:
-    client:
-        image: nginx
-        ports:
-            - 8066:80
-        volumes:
-            - ./src:/usr/share/nginx/html
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./conf/nginx:/etc/nginx/conf.d
+      - ./src:/usr/share/nginx/html
+      - ./conf/certbot/conf:/etc/letsencrypt
+      - ./conf/certbot/www:/var/www/certbot
+
+  certbot:
+    image: certbot/certbot
+      - ./conf/certbot/conf:/etc/letsencrypt
+      - ./conf/certbot/www:/var/www/certbot
+
