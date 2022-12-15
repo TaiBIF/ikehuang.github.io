@@ -129,26 +129,52 @@
 			style = 'style="max-width:270px;"'
 		} 
 
-		var info = '<div class="itembox">' +
-			'<div class="bg_w">' +
-			'<div class="colorarea"></div>' +
-			'</div>' +
-			'<div class="main_1240">' +
-			'<div class="leftbox">' +
-			'<div class="logo_area">' +
-			'<img src="assets/images/' + parentInfo.logo + '"  '+style+' />' +
-			'</div>' +
-			'<h2>' + parentInfo.title + '</h2><h3>' + parentInfo.sub_title + '</h3>' +
-			'<p>' + parentInfo.description + '</p>' +
-			'</div>' +
-			'<div class="rightbox">' +
-			'<div class="pic">' +
-			'<img src="assets/images/' + parentInfo.abimg + '" />' +
-			'</div>' +
-			'<a target="_blank" href="' + parentInfo.link + '" class="linkto">聯絡我們</a>' +
-			'</div>' +
-			'</div>' +
-			'</div>';
+		if (parent=='wra'){
+			var info = '<div class="itembox">' +
+				'<div class="bg_w">' +
+				'<div class="colorarea"></div>' +
+				'</div>' +
+				'<div class="main_1240">' +
+				'<div class="leftbox">' +
+				'<div class="logo_area">' +
+				'<img src="assets/images/' + parentInfo.logo + '"  '+style+' />' +
+				'</div>' +
+				'<h2>' + parentInfo.title + '</h2><h3>' + parentInfo.sub_title + '</h3>' +
+				'<p>' + parentInfo.description + '</p>' +
+				'</div>' +
+				'<div class="rightbox">' +
+				'<div class="pic">' +
+				'<img src="assets/images/' + parentInfo.abimg + '" />' +
+				'</div>' +
+				'<a href="' + parentInfo.link + '" class="linkto">聯絡我們</a>' +
+				'</div>' +
+				'</div>' +
+				'</div>';
+	
+		} else {
+			var info = '<div class="itembox">' +
+				'<div class="bg_w">' +
+				'<div class="colorarea"></div>' +
+				'</div>' +
+				'<div class="main_1240">' +
+				'<div class="leftbox">' +
+				'<div class="logo_area">' +
+				'<img src="assets/images/' + parentInfo.logo + '"  '+style+' />' +
+				'</div>' +
+				'<h2>' + parentInfo.title + '</h2><h3>' + parentInfo.sub_title + '</h3>' +
+				'<p>' + parentInfo.description + '</p>' +
+				'</div>' +
+				'<div class="rightbox">' +
+				'<div class="pic">' +
+				'<img src="assets/images/' + parentInfo.abimg + '" />' +
+				'</div>' +
+				'<a target="_blank" href="' + parentInfo.link + '" class="linkto">聯絡我們</a>' +
+				'</div>' +
+				'</div>' +
+				'</div>';
+	
+		}
+
 
 		$('#partner-name').text(parentInfo.breadtitle);
 
