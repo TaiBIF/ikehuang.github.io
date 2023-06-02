@@ -7128,7 +7128,7 @@ body {
   -moz-opacity: 0;
   filter: alpha(opacity=100);
   max-width: 800px;
-  max-height: 535px;
+  /*max-height: 535px;*/
   height: 100%;
   width: 100%;
   overflow: hidden
@@ -7138,7 +7138,7 @@ body {
   .popbg .wbox_center {
       max-height: initial;
       height: initial;
-      padding: 20px 15px 15px 15px
+      padding: 20px 15px 15px 15px;
   }
 }
 
